@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { DM_Sans, IBM_Plex_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
@@ -35,6 +34,14 @@ export const metadata = {
       "100 free online tools and calculators.",
     siteName: "Goodfolk Toolbox",
     type: "website",
+    images: [
+      {
+        url: "https://tools.goodfolkdigital.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Goodfolk Toolbox",
+      },
+    ],
   },
 
   twitter: {
@@ -42,6 +49,7 @@ export const metadata = {
     title: "Goodfolk Toolbox",
     description:
       "100 free online tools and calculators.",
+    images: ["https://tools.goodfolkdigital.com/og-image.jpg"],
   },
 };
 
@@ -55,7 +63,7 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${plexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}<Analytics /></body>
+      <body className="min-h-full flex flex-col">{children}</body>
       <GoogleAnalytics gaId="G-G6L5WEM83E" />
     </html>
   );
