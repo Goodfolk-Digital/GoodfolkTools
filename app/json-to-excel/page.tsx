@@ -15,7 +15,7 @@ export default function Home() {
 
       const parsed = JSON.parse(jsonText);
 
-      const response = await fetch("/api/convert", {
+      const response = await fetch("/json-to-excel/api/convert", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
